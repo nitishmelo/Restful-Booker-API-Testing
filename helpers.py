@@ -1,5 +1,4 @@
 import requests
-from pythonping import ping
 
 def returnUrl(path):
     url = 'https://restful-booker.herokuapp.com'
