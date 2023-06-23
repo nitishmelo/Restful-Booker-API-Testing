@@ -26,21 +26,25 @@ def getForPing(url):
 def getAssertCode(url):
     response = requests.get(url)
     body = response.json()
+    assert body is not None
     assert response.status_code == 200
 
 def postAssertCode(url, headers, data):
     response = requests.post(url, headers=headers, json=data)
     body = response.json()
+    assert body is not None
     assert response.status_code == 200
 
 def putAssertCode(url, headers, data):
     response = requests.put(url, headers=headers, json=data)
     body = response.json()
+    assert body is not None
     assert response.status_code == 200
 
 def patchAssertCode(url, headers, data):
     response = requests.patch(url, headers=headers, json=data)
     body = response.json()
+    assert body is not None
     assert response.status_code == 200
 
 def deleteAssertCode(url, headers):
